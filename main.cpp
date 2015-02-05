@@ -27,7 +27,7 @@ int main()
         cout << "Please input a size for the magic board from 3 to 111\n Input: " << endl;
         cin >> Size;
         cout << endl;
-        if(Size >= 3 && Size <= 111){
+        if(Size >= 3 && Size <= 111 && Size%2 != 0){
             cout << "UserDefined Magic Square of Size: " << Size << endl;
             UserDefined.SetSquareSize(Size);
             UserDefined.Magic();

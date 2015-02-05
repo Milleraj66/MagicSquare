@@ -80,6 +80,10 @@ void MagicSquare::Magic(){
         }
 
         else{
+            // Place holder for row and column for the case when after you get to a valid
+            // location the spot is already filled
+            int tmpRow = Row;
+            int tmpCol = Col;
             // Special Case (a)
             // if up moves us over top
             // move row to bottom row
@@ -98,15 +102,24 @@ void MagicSquare::Magic(){
             // if after moving to a valid location it is taken
             // place directly below
             if(Square[Row][Col] != 0){
+                // place actual row and column position back to previous location
+                Row = tmpRow;
+                Col = tmpCol;
                 // move directly down
                 Row++;
+                Current++;
+                Square[Row][Col] = Current;
+
             }
+            // else position is free and place current + 1 there
+            else{
             // ready to increment Current for placing in board
             Current++;
             // fill current location in board
             Square[Row][Col] = Current;
+            }
 
-        }
+        }// END else
 
     }//END for()
 
