@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1423117200 source:/home/aj/CodeBlocksProjects/MagicSquare/MagicSquare.cpp
+	"MagicSquare.h"
+
+1423115790 /home/aj/CodeBlocksProjects/MagicSquare/MagicSquare.h
+	<iostream>
+
+1423115558 source:/home/aj/CodeBlocksProjects/MagicSquare/main.cpp
+	<iostream>
+	"MagicSquare.h"
+
